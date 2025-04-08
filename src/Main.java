@@ -9,7 +9,7 @@ public class Main {
         if (esEmpate(puntosJugador1, puntosJugador2)) {
             score = extraerPuntuacionesDeEmpate(puntosJugador1);
         }
-        else if (puntosJugador1 >=4 || puntosJugador2 >=4)
+        else if (ventagaParaGanar(puntosJugador1, puntosJugador2))
         {
             int minusResult = puntosJugador1-puntosJugador2;
             if (esEmpate(minusResult, 1)) score ="Advantage player1";
@@ -42,6 +42,10 @@ public class Main {
 
         }
     return score;
+    }
+
+    private static boolean ventagaParaGanar(int puntosJugador1, int puntosJugador2) {
+        return puntosJugador1 >= 4 || puntosJugador2 >= 4;
     }
 
     private static String extraerPuntuacionesDeEmpate(int puntosJugador1) {
