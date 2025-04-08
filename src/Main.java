@@ -6,7 +6,7 @@ public class Main {
         String score = "";
         int tempScore=0;
 
-        if (puntosJugador1 == puntosJugador2) {
+        if (esEmpate(puntosJugador1, puntosJugador2)) {
             switch (puntosJugador1)
             {
                 case 0:
@@ -30,8 +30,8 @@ public class Main {
         else if (puntosJugador1 >=4 || puntosJugador2 >=4)
         {
             int minusResult = puntosJugador1-puntosJugador2;
-            if (minusResult==1) score ="Advantage player1";
-            else if (minusResult ==-1) score ="Advantage player2";
+            if (esEmpate(minusResult, 1)) score ="Advantage player1";
+            else if (esEmpate(minusResult, -1)) score ="Advantage player2";
             else if (minusResult>=2) score = "Win for player1";
             else score ="Win for player2";
         }
@@ -39,7 +39,7 @@ public class Main {
         {
             for (int i=1; i<3; i++)
             {
-                if (i==1) tempScore = puntosJugador1;
+                if (esEmpate(i, 1)) tempScore = puntosJugador1;
                 else { score+="-"; tempScore = puntosJugador2;}
                 switch(tempScore)
                 {
@@ -60,5 +60,9 @@ public class Main {
 
         }
     return score;
+    }
+
+    private static boolean esEmpate(int puntosJugador1, int puntosJugador2) {
+        return puntosJugador1 == puntosJugador2;
     }
 }
