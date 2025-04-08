@@ -20,12 +20,9 @@ public class Main {
         return puntosJugador1 >= 4 || puntosJugador2 >= 4;
     }
 
-private static String getRegularScore(int puntosJugador1, int puntosJugador2, String score) {
-    score += obtenerPuntuacion(puntosJugador1);
-    score += "-";
-    score += obtenerPuntuacion(puntosJugador2);
-    return score;
-}
+    private static String getRegularScore(int puntosJugador1, int puntosJugador2) {
+        return obtenerPuntuacion(puntosJugador1) + "-" + obtenerPuntuacion(puntosJugador2);
+    }
 
 private static String obtenerPuntuacion(int puntos) {
     String[] puntuaciones = {"Love", "Fifteen", "Thirty", "Forty"};
