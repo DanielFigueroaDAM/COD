@@ -7,25 +7,7 @@ public class Main {
         int tempScore=0;
 
         if (esEmpate(puntosJugador1, puntosJugador2)) {
-            switch (puntosJugador1)
-            {
-                case 0:
-                    score = "Love-All";
-                    break;
-                case 1:
-                    score = "Fifteen-All";
-                    break;
-                case 2:
-                    score = "Thirty-All";
-                    break;
-                case 3:
-                    score = "Forty-All";
-                    break;
-                default:
-                    score = "Deuce";
-                    break;
-
-            }
+            score = extraerPuntuacionesDeEmpate(puntosJugador1);
         }
         else if (puntosJugador1 >=4 || puntosJugador2 >=4)
         {
@@ -60,6 +42,30 @@ public class Main {
 
         }
     return score;
+    }
+
+    private static String extraerPuntuacionesDeEmpate(int puntosJugador1) {
+        String score;
+        switch (puntosJugador1)
+        {
+            case 0:
+                score = "Love-All";
+                break;
+            case 1:
+                score = "Fifteen-All";
+                break;
+            case 2:
+                score = "Thirty-All";
+                break;
+            case 3:
+                score = "Forty-All";
+                break;
+            default:
+                score = "Deuce";
+                break;
+
+        }
+        return score;
     }
 
     private static boolean esEmpate(int puntosJugador1, int puntosJugador2) {
