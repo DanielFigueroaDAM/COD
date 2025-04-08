@@ -7,18 +7,17 @@ public class Main {
         int tempScore=0;
 
         if (esEmpate(puntosJugador1, puntosJugador2)) {
-            score = extraerPuntuacionesDeEmpate(puntosJugador1);
+            return extraerPuntuacionesDeEmpate(puntosJugador1);
         }
         else if (ventagaParaGanar(puntosJugador1, puntosJugador2))
         {
-            score = sacarVentagaParaGanarPuntuacion(puntosJugador1, puntosJugador2);
+            return sacarVentagaParaGanarPuntuacion(puntosJugador1, puntosJugador2);
         }
         else
         {
-            score = getRegularScore(puntosJugador1, puntosJugador2, score);
+            return getRegularScore(puntosJugador1, puntosJugador2, score);
 
         }
-    return score;
     }
 
     private static String getRegularScore(int puntosJugador1, int puntosJugador2, String score) {
