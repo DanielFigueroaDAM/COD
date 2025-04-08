@@ -3,9 +3,7 @@ public class Main {
      * metodo para devolver la puntuacion de tenis
      */
     public static String getScore(int puntosJugador1, int puntosJugador2) {
-        String score = "";
         int tempScore=0;
-
         if (esEmpate(puntosJugador1, puntosJugador2)) {
             return extraerPuntuacionesDeEmpate(puntosJugador1);
         }
@@ -15,7 +13,7 @@ public class Main {
         }
         else
         {
-            return getRegularScore(puntosJugador1, puntosJugador2, score);
+            return getRegularScore(puntosJugador1, puntosJugador2, "");
 
         }
     }
@@ -28,6 +26,7 @@ public class Main {
             else { score +="-"; tempScore = puntosJugador2;}
             switch(tempScore)
             {
+
                 case 0:
                     score +="Love";
                     break;
