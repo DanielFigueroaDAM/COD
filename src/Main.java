@@ -25,18 +25,8 @@ private static String getRegularScore(int puntosJugador1, int puntosJugador2, St
 }
 
 private static String obtenerPuntuacion(int puntos) {
-    switch (puntos) {
-        case 0:
-            return "Love";
-        case 1:
-            return "Fifteen";
-        case 2:
-            return "Thirty";
-        case 3:
-            return "Forty";
-        default:
-            return "";
-    }
+    String[] puntuaciones = {"Love", "Fifteen", "Thirty", "Forty"};
+    return (puntos >= 0 && puntos < puntuaciones.length) ? puntuaciones[puntos] : "";
 }
 
     private static String sacarVentagaParaGanarPuntuacion(int puntosJugador1, int puntosJugador2) {
