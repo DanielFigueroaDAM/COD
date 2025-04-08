@@ -3,7 +3,6 @@ public class Main {
      * metodo para devolver la puntuacion de tenis
      */
     public static String getScore(int puntosJugador1, int puntosJugador2) {
-        int tempScore=0;
         if (esEmpate(puntosJugador1, puntosJugador2)) {
             return extraerPuntuacionesDeEmpate(puntosJugador1);
         }
