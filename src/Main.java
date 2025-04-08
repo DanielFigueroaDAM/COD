@@ -43,30 +43,10 @@ private static String obtenerPuntuacion(int puntos) {
         return puntosJugador1 >= 4 || puntosJugador2 >= 4;
     }
 
-    private static String extraerPuntuacionesDeEmpate(int puntosJugador1) {
-        String score;
-        switch (puntosJugador1)
-        {
-            case 0:
-                score = "Love-All";
-                break;
-            case 1:
-                score = "Fifteen-All";
-                break;
-            case 2:
-                score = "Thirty-All";
-                break;
-            case 3:
-                score = "Forty-All";
-                break;
-            default:
-                score = "Deuce";
-                break;
-
-        }
-        return score;
-    }
-
+private static String extraerPuntuacionesDeEmpate(int puntosJugador1) {
+    String[] puntuacionesDeEmpate = {"Love-All", "Fifteen-All", "Thirty-All", "Forty-All", "Deuce"};
+    return (puntosJugador1 >= 0 && puntosJugador1 <= 3) ? puntuacionesDeEmpate[puntosJugador1] : puntuacionesDeEmpate[4];
+}
     private static boolean esEmpate(int puntosJugador1, int puntosJugador2) {
         return puntosJugador1 == puntosJugador2;
     }
