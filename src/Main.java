@@ -11,11 +11,7 @@ public class Main {
         }
         else if (ventagaParaGanar(puntosJugador1, puntosJugador2))
         {
-            int minusResult = puntosJugador1-puntosJugador2;
-            if (esEmpate(minusResult, 1)) score ="Advantage player1";
-            else if (esEmpate(minusResult, -1)) score ="Advantage player2";
-            else if (minusResult>=2) score = "Win for player1";
-            else score ="Win for player2";
+            score = sacarVentagaParaGanarPuntuacion(puntosJugador1, puntosJugador2);
         }
         else
         {
@@ -42,6 +38,16 @@ public class Main {
 
         }
     return score;
+    }
+
+    private static String sacarVentagaParaGanarPuntuacion(int puntosJugador1, int puntosJugador2) {
+        String score;
+        int minusResult = puntosJugador1 - puntosJugador2;
+        if (esEmpate(minusResult, 1)) score ="Advantage player1";
+        else if (esEmpate(minusResult, -1)) score ="Advantage player2";
+        else if (minusResult>=2) score = "Win for player1";
+        else score ="Win for player2";
+        return score;
     }
 
     private static boolean ventagaParaGanar(int puntosJugador1, int puntosJugador2) {
