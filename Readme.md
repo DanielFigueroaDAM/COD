@@ -1,3 +1,17 @@
+MI TRABAJO DE REFACTORIZACIÓN
+1. Renombrar variables para mayor claridad (por ejemplo, score, tempScore).
+2. Extraer el método de comprobación de empate: esEmpate().
+3. Extraer el método para manejar puntuaciones de empate: extraerPuntuacionesDeEmpate().
+4. Reemplazar switch por array en obtenerPuntuacion().
+5. Reemplazar switch por array en extraerPuntuacionesDeEmpate().
+6. Extraer el método de puntuación regular: getRegularScore().
+7. Extraer el método de ventaja o victoria: sacarVentajaParaGanarPuntuacion().
+8. Extraer método para comprobar si se aplica ventaja o victoria: ventajaParaGanar().
+9. Eliminar variables intermedias innecesarias como score y tempScore.
+10. Reorganizar llamadas en getScore() para usar los métodos extraídos.
+11. Realizar pequeños ajustes y pruebas en cada refactor (mas cambios).
+
+
 # Refactorizacion 
 El término refactorizar dentro del campo de la Ingeniería del Software hace referencia a la modificación del código sin cambiar su funcionamiento.
 
